@@ -1,0 +1,27 @@
+3 модуль 30 задание: class Dictionary:    def __init__(self, dictionary):
+        self.dictionary = dictionary
+    def __call__(self, key):        if key in self.dictionary:
+            return self.dictionary[key]        else:
+            return None
+code = []while data := input():
+    code.append(data)code = "\n".join(code)
+exec(code)
+4 модуль 37 задание: import datetime
+def shift_time(days: int, seconds: int):    initial_datetime = datetime.datetime(2023, 1, 1, 12, 30, 0)
+    delta = datetime.timedelta(days=days, seconds=seconds)    shifted_datetime = initial_datetime + delta
+    shifted_day = shifted_datetime.day    shifted_second = shifted_datetime.second
+    return shifted_day, shifted_second
+days = int(input())seconds = int(input())
+print(shift_time(days, seconds))
+4 модуль 40 задание: from collections import dequefrom typing import List
+def rotate_list(nums: List[int], n: int):
+    # Создаем двустороннюю очередь из списка чисел    dq = deque(nums)
+    # Крутим список n раз
+    for _ in range(n):        # Извлекаем последний элемент из очереди
+        last_element = dq.pop()
+        # Вставляем извлеченный элемент в начало очереди        dq.appendleft(last_element)
+    # Возвращаем список, преобразовав очередь обратно в список
+    return list(dq)
+code = []while data := input():
+    code.append(data)code = "\n".join(code)
+exec(code)
